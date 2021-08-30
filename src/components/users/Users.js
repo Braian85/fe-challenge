@@ -13,12 +13,7 @@ import {useState} from 'react'
      setState({open: !state.open})
 
    }
-
-   function handleClick(e) {
-        const id = e.target.id;
-        console.log(id);
-      }
-   
+  
       return (
        <div className="card">
            <div className="header">
