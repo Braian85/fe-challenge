@@ -19,8 +19,9 @@ import "./Users.css";
            <div className="comments">
                  
                     <div className="name"><strong>Name:</strong> <span> {e.name}</span></div>
-{/*                     <div className="email"><strong>Email:</strong> <span>{props.com.comments.filter(f => f.postId=== props.clave+1).map(e => e.email)}</span></div>
-                    <div className="bodycom"><strong>Comment:</strong> {props.com.comments.filter(f => f.postId=== props.clave+1).map(e => e.body)}</div> */}
+                    <div className="email"><strong>Email:</strong> <span> {e.email}</span></div>
+                    <div className="bodycom"><strong>Comment:</strong> <span> {e.body}</span></div>
+
            </div>
 
 
