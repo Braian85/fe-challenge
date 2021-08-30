@@ -12,6 +12,15 @@
     align-items: left;
     overflow: hidden;
     background-color: white;
+
+      /* media queries */
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+  @media (max-width: 420px) {
+    text-align: left;
+    
+  }
     
 
 }
@@ -68,8 +77,8 @@
     /* background-color: rgb(255, 254, 234);  */
     display: inline;
     word-wrap: break-word;
-    padding: 10px 20px 25px 20px;
-    border-bottom: 1px solid grey;
+    padding: 10px 25px 10px 25px;
+    /* border-bottom: 1px solid grey; */
    
 }
 
