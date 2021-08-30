@@ -48,3 +48,12 @@
 .card .header {
     border-bottom: 1px solid;
 }
+
+.card .comments {
+
+    background-color: rgb(255, 254, 234); 
+    display: inline;
+    word-wrap: break-word;
+    padding: 10px 20px 10px 20px;
+   
+}

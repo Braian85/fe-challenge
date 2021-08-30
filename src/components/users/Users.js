@@ -14,17 +14,21 @@ import "./Users.css";
            </div>
              
            <div className="body">{props.data.body} </div> 
-            {console.log("Log:",props.clave+1,props.com.comments.filter(f => f.postId=== props.clave+1).map(e => e.id))}
-           <div>{props.clave+1}</div>
-         {/*   {let a = props.com.comments.filter(f => (f.postId=== props.clave+1))} */}
-         
+            {props.com.comments.filter(f => f.postId=== props.clave+1).map(e => (
+
+           <div className="comments">
+                 
+                    <div className="name"><strong>Name:</strong> <span> {e.name}</span></div>
+{/*                     <div className="email"><strong>Email:</strong> <span>{props.com.comments.filter(f => f.postId=== props.clave+1).map(e => e.email)}</span></div>
+                    <div className="bodycom"><strong>Comment:</strong> {props.com.comments.filter(f => f.postId=== props.clave+1).map(e => e.body)}</div> */}
+           </div>
+
+
+            ))}
+           
           
-      
-        <div>{props.com.comments.filter(f => f.postId=== props.clave+1).map(e => e.id)}</div>
-      
 
-
-      
+        
          
        </div>
     )
