@@ -14,14 +14,15 @@ import "./Users.css";
            </div>
              
            <div className="body">{props.data.body}  </div> 
-           <div className="comment-header">Comments:</div>
+           <div className="comment-header">
+               <button>Comments</button></div>
             {props.com.comments.filter(f => f.postId=== props.clave+1).map(e => (
 
                 <div className="comments">
                 
                <div className="contact-info">
-                    <div className="name"><strong>Name:</strong> <span> {e.name}</span></div>
-                    <div className="email"><strong>Email:</strong> <span> {e.email}</span></div>
+                    <div className="name"><span> {e.name}</span></div>
+                    <div className="email"><span> {e.email}</span></div>
                </div>
                     <div className="bodycom"><span> {e.body}</span></div>
            </div>

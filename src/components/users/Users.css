@@ -1,13 +1,14 @@
 .card {
-    width: 30%;
+    width: 40%;
+    
     /* height: 200px; */
-    border: 3px solid rgb(119, 119, 119);
+    border: 1px solid rgb(119, 119, 119);
     border-radius: 10px; 
-    margin-bottom: 40px;
-    margin-left: 30px;
+    margin-bottom: 15px;
+    margin-left: 30%;
     display: flex; 
     flex-direction: column; 
-    box-shadow: 0px 10px 10px grey ;
+    box-shadow: 0px 10px 10px rgb(194, 194, 194) ;
     align-items: left;
     
 
@@ -40,8 +41,9 @@
 
 .card .body {
 
-    background-color: rgba(214, 255, 241, 0.609);
+    
     padding: 10px 20px 10px 20px;
+    margin-bottom: 50px;
 
 }
 
@@ -51,7 +53,8 @@
 
 .card .comments {
 
-    background-color: rgb(255, 254, 234); 
+   
+    /* background-color: rgb(255, 254, 234);  */
     display: inline;
     word-wrap: break-word;
     padding: 10px 20px 25px 20px;
@@ -66,11 +69,12 @@
 
 .card .comments .bodycom {
 
+    margin-top: 10px; 
     font-size: .8em;
 }
 
 .card .comment-header {
-    background-color: rgb(255, 254, 234); 
+    
     padding-left: 20px;
     font-weight: bold;
     
