@@ -18,7 +18,27 @@
   padding-top: 20px;  
   padding-bottom: 20px;
   margin-bottom: 40px;
+
+ 
   
   
 
 }
+
+.nav span:hover {
+animation: glow .5s forwards ;
+ 
+}
+
+@keyframes glow {
+   from{
+    text-shadow: 0 0 0px #fff;
+    color: #ffffff;
+    }
+  to{
+    text-shadow: 0 0 10px #fff, 0 0 20px #F5E6FF, 0 0 30px #ff0000;
+    color:#ffffff;
+  
+    }
+}
+
