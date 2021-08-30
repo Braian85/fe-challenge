@@ -1,7 +1,18 @@
 import React from 'react'
 import "./Users.css";
 
+import {useState} from 'react'
+
   function Users(props) {
+
+    const [state, setState] = useState({
+        open: false 
+    })
+
+   function togglePanel(e) {
+     setState({open: !state.open})
+
+   }
 
    function handleClick(e) {
         const id = e.target.id;
@@ -16,16 +27,19 @@ import "./Users.css";
            </div>
            <div className="body">{props.data.body}  </div> 
            <div className="comment-header">
-               <button id={props.data.id} className="btn" onClick={ handleClick}>Comments</button></div>
-            {props.com.comments.filter(f => f.postId=== props.clave+1).map(e => (
-               <div className="comments">
-               <div className="contact-info">
-               <div className="name">  {e.name}</div>
-               <div className="email"> {e.email}</div>
+               <button id={props.data.id} className="btn" onClick={togglePanel}>Comments</button></div>
+            {state.open?      
+                
+                props.com.comments.filter(f => f.postId=== props.clave+1).map(e => (
+                   <div className="comments">
+                   <div className="contact-info">
+                   <div className="name">  {e.name}</div>
+                   <div className="email"> {e.email}</div>
+                   </div>
+                   <div className="bodycom"><span> {e.body}</span></div>
                </div>
-               <div className="bodycom"><span> {e.body}</span></div>
-           </div>
-            ))}
+                )             
+                ): null}   
           </div>
     )
 }
