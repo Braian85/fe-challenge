@@ -15,7 +15,7 @@ import "./Users.css";
              
            <div className="body">{props.data.body}  </div> 
            <div className="comment-header">
-               <button>Comments</button></div>
+               <button className="btn">Comments</button></div>
             {props.com.comments.filter(f => f.postId=== props.clave+1).map(e => (
 
                 <div className="comments">
@@ -27,17 +27,8 @@ import "./Users.css";
                     <div className="bodycom"><span> {e.body}</span></div>
            </div>
 
-
-                 
-
-
-
             ))}
-           
-          
-
-        
-         
+       
        </div>
     )
 }

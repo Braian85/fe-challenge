@@ -11,6 +11,7 @@
     box-shadow: 0px 10px 10px rgb(194, 194, 194) ;
     align-items: left;
     overflow: hidden;
+    background-color: white;
     
 
 }
@@ -114,4 +115,16 @@
 .name, .email {
 
     font-size: .7rem;
+}
+
+.btn {
+
+    border: 0px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.btn:hover {
+
+    text-decoration:underline;
 }
