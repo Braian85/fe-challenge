@@ -54,6 +54,24 @@
     background-color: rgb(255, 254, 234); 
     display: inline;
     word-wrap: break-word;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 25px 20px;
+    border-bottom: 1px solid grey;
    
+}
+
+.card .comments .contact-info {
+
+    background-color: rgba(128, 128, 128, 0.171);
+}
+
+.card .comments .bodycom {
+
+    font-size: .8em;
+}
+
+.card .comment-header {
+    background-color: rgb(255, 254, 234); 
+    padding-left: 20px;
+    font-weight: bold;
+    
 }
