@@ -21,8 +21,8 @@ import "./Users.css";
                 <div className="comments">
                 
                <div className="contact-info">
-                    <div className="name"><span> {e.name}</span></div>
-                    <div className="email"><span> {e.email}</span></div>
+                    <div className="name">  {e.name}</div>
+                    <div className="email"> {e.email}</div>
                </div>
                     <div className="bodycom"><span> {e.body}</span></div>
            </div>

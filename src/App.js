@@ -60,7 +60,7 @@ function App() {
      
     {/*  {console.log("FAFAFA:", comments.comments.filter(f =>f.postId == 1))} */}
 
-      <nav className="nav"><span><strong>COMPANY </strong>SOCIAL NETWORK</span></nav>
+      <nav className="nav"><span><strong className="str">COMPANY </strong>SOCIAL NETWORK</span></nav>
       {posts.dataReady && comments.dataReady  ? posts.posts.map((data, i) =>
        (<Users key={i} clave={i} data={data} com= {comments} />)) 
        :(<h1>Loading ...{console.log("Cargando...")}</h1>)}
