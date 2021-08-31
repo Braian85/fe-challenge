@@ -19,7 +19,7 @@
   }
   @media (max-width: 420px) {
     text-align: left;
-    
+
   }
     
 
@@ -78,14 +78,12 @@
     display: inline;
     word-wrap: break-word;
     padding: 10px 25px 10px 25px;
+   
+    
     /* border-bottom: 1px solid grey; */
    
 }
 
-.card .comments .contact-info {
-
-   /*  background-color: rgba(128, 128, 128, 0.171); */
-}
 
 .card .comments .bodycom {
 
@@ -131,6 +129,7 @@
     border: 0px;
     background-color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn:hover {
