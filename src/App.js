@@ -29,8 +29,6 @@ function App() {
     })
   }, [])
 
-
-
   console.log(posts)
   return (
     <div className="App">

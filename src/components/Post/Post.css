@@ -12,16 +12,7 @@
     align-items: left;
     overflow: hidden;
     background-color: white;
-
-      /* media queries */
-  @media (max-width: 767px) {
-    text-align: center;
-  }
-  @media (max-width: 420px) {
-    text-align: left;
-
-  }
-  
+ 
 
 }
 
@@ -36,7 +27,6 @@
     padding: 15px; 
 
 }
-
 
 .card .title {
 
@@ -53,7 +43,7 @@
 }
 
 .card .body {
-    
+ 
     padding: 10px 20px 10px 20px;
    
 }
@@ -102,13 +92,6 @@
     color: #3E606F;
 }
 
-
-/* .Neutral-Blue-1-hsla { color: hsla(78, 100, 98, 1); }
-.Neutral-Blue-2-hsla { color: hsla(80, 29, 80, 1); }
-.Neutral-Blue-3-hsla { color: hsla(148, 12, 61, 1); }
-.Neutral-Blue-4-hsla { color: hsla(198, 28, 33, 1); }
-.Neutral-Blue-5-hsla { color: hsla(199, 44, 17, 1); } */
-
 .name, .email {
 
     font-size: .7rem;
@@ -130,5 +113,4 @@
 #editable.body-com {
     outline: 0px solid transparent;
     
-
 }
