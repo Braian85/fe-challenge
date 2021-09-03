@@ -1,5 +1,5 @@
 import './App.css';
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import axios from 'axios'
 import Post from './components/Post/Post'
 import './spinner.css'
@@ -27,7 +27,7 @@ function App() {
       dispatch(setPostsLoading(false));
 
     })
-  }, [])
+  }, [dispatch])
 
   console.log(posts)
   return (

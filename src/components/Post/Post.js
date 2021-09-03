@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import "./Post.css";
 import { useDispatch} from 'react-redux';
-import {addComment, setPostsLoading} from '../../../src/redux/slices/chatSlices'
+import {addComment} from '../../../src/redux/slices/chatSlices'
 import axios from 'axios'
 
 import {useState} from 'react'
@@ -38,7 +38,7 @@ function Post({post, com, clave}) {
       })
 
     }
-  }, [activatedComments])
+  }, [activatedComments, dispatch, post.id])
 
   function togglePanel(e) {
     e.preventDefault()
