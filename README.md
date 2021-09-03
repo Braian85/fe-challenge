@@ -1,10 +1,10 @@
 # Project Assumtions
 
--The project consists in building a Feed of a Company social Network. 
--Users pictures are provided by the following endpoint: 
-    https://i.pravatar.cc/150?img=1
+-The project consists in building a Feed of a Company social Network.\
+-Users pictures are provided by the following endpoint: \
+    https://i.pravatar.cc/150?img=1\
 -Infinite scroll for posts and comments would be implemented with more time.
--
+
 
 
 
