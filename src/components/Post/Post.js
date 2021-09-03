@@ -38,7 +38,7 @@ function Post({post, com, clave}) {
       })
 
     }
-  }, [activatedComments, dispatch, post.id])
+  }, [activatedComments, post.id])
 
   function togglePanel(e) {
     e.preventDefault()
