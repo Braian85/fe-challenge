@@ -10,42 +10,49 @@ import {useState} from 'react'
   function Post({post, com, clave}) {
     const dispatch = useDispatch();
     const [activatedComments, setActivatedComments] = useState(false)
-
- 
-    console.log("Console log del post: ", post.id)
-    console.log("Open??:", activatedComments);  
+    console.log("activatedComments", activatedComments);
+    
     useEffect(() => {
-      axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${post.id}`)
-      .then( res => {
-        console.log("api de ID: ",res.data)
-/*          dispatch(addComment({
-          postId: post.postId,
-          comment: {
-            name: post.postId, 
-            email: post.postId,
-            body: post.postId
-          }
-  
-        }));  */
+      if(activatedComments)  {
+        console.log("Entró a useEffect")
+        axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${post.id}`)
+        .then( res => {
+          console.log(res.data);
 
-  
-      })
-      .catch(err => {
-        console.log(err)
-      })
-      .finally(() => {
-       
-  
-      })
+          res.data.forEach((fe) => 
+          dispatch(addComment({
+            postId: post.id,
+            comment: {
+              name: fe.name, 
+              email: fe.email,
+              body: fe.body
+            }
+          }))  
+          )
+          
+          
+          
+   
+    
+        })
+        .catch(err => {
+          console.log(err)
+        })
+        .finally(() => {
+         
+    
+        })
+
+
+      }
     }, [activatedComments])
 
    function togglePanel(e) {
+     e.preventDefault()
     setActivatedComments(!activatedComments)
      console.log("toggle open:", activatedComments);  
-       
-    
+           
      }
-
    
    
    function handleEnter(e) {

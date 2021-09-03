@@ -14,16 +14,9 @@ export const chatSlices = createReducer(initialChat, builder => {
         console.log("action: ", action)
     })
     builder.addCase(addComment, (state, action) => {
-        // fid array postId
         const posts = [...state.posts]
-        const postIdx = state.posts.findIndex((p) => p.id === action.payload.postId) 
-
-        console.log("Reducer log:", state)
-        
-        //En vez de agregar un string agregar un objeto que tenga name, email, body. 
-        console.log('>>>', postIdx) 
+        const postIdx = state.posts.findIndex((p) => p.id === action.payload.postId)              
         posts[postIdx].comments = [...posts[postIdx].comments, action.payload.comment]
-        
         state.posts = posts;
 
     })

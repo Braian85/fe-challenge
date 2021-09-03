@@ -11,12 +11,6 @@ function App() {
   const posts = useSelector(state => state?.chat.posts);
   const postsLoading = useSelector(state => state?.postsLoading);
 
-  const [comments, setComments] = useState(
-    {
-      dataReady: false,
-      comments: []
-    }
-  );
 
   // Hook to load Users.
   useEffect(() => {
@@ -35,22 +29,13 @@ function App() {
     })
   }, [])
 
-  //Hook to load Comments.
-  useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/comments")
-    .then( res => {
-      setComments({comments: res.data, dataReady: true})
-    })
-    .catch(err => {
-      console.error(err)
-    })
-  }, []) 
+
 
   console.log(posts)
   return (
     <div className="App">
       <nav className="nav"><span><strong className="str">COMPANY </strong>SOCIAL NETWORK</span></nav>
-      {!postsLoading && comments.dataReady  ? posts.map((data, i) =>
+      {!postsLoading ? posts.map((data, i) =>
       (<Post key={i} clave={i} post={data}  />)) 
       :<div class="lds-ring"><div></div><div></div><div></div><div></div></div>}
     </div>
