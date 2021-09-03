@@ -1,7 +1,7 @@
 # Project Assumtions
 
 -The project consists in building a Feed of a company social network.\
--Posts and comments endpoint items are limited to 100. \
+-Posts and comments endpoint items are limited to 100 entries. \
 -Users pictures are provided by the following endpoint: \
     https://i.pravatar.cc/150?img=1 \
 -Infinite scroll for posts and comments would be implemented with more time.
