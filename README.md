@@ -1,13 +1,10 @@
 # Project Assumtions
 
--The project consists in building a Feed of a Company social Network.\
+-The project consists in building a Feed of a company social network.\
+-Posts and comments endpoint items are limited to 100. \
 -Users pictures are provided by the following endpoint: \
-    https://i.pravatar.cc/150?img=1\
+    https://i.pravatar.cc/150?img=1 \
 -Infinite scroll for posts and comments would be implemented with more time.
-
-
-
-
 
 # Getting Started with Create React App
 
