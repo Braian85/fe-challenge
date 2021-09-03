@@ -72,8 +72,18 @@
   
 }
 
+.body-com {
 
-.card .comments .body-com {
+    margin-top: 10px; 
+    font-size: .8em;
+    background-color:#f0f0f0;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px; 
+    color: #888888;
+
+}
+
+.card .comments .body-com  {
 
     margin-top: 10px; 
     font-size: .8em;
