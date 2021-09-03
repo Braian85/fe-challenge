@@ -21,7 +21,7 @@
     text-align: left;
 
   }
-    
+  
 
 }
 
@@ -34,8 +34,6 @@
     margin-bottom: 15px;
     border-radius: 50%;
     padding: 15px; 
-   
-    /* padding-left: 10px;  */
 
 }
 
@@ -50,19 +48,14 @@
     padding-right: 10px; 
     padding-bottom: 20px;
     text-align: left;
-    
-
     color: #FCFFF5; 
     
-
 }
 
 .card .body {
-
     
     padding: 10px 20px 10px 20px;
-    margin-bottom: 50px;
-
+   
 }
 
 .card .header {
@@ -73,42 +66,29 @@
 
 .card .comments {
 
-   
-    /* background-color: rgb(255, 254, 234);  */
     display: inline;
     word-wrap: break-word;
     padding: 10px 25px 10px 25px;
-   
-    
-    /* border-bottom: 1px solid grey; */
-   
+  
 }
 
 
-.card .comments .bodycom {
+.card .comments .body-com {
 
     margin-top: 10px; 
     font-size: .8em;
     background-color:#f0f0f0;
     border-radius: 20px;
     padding: 10px 10px 10px 10px; 
-    /* color: rgb(141, 141, 141);  */ 
     color: #888888;
     
 }
 
 .card .comment-header {
-   
     padding-left: 20px;
-  
-    
 }
 
 .card .contact-info .namemail {
-
-    
-
-    /* color: rgb(113, 172, 197);  */
     color: #3E606F;
 }
 
@@ -135,4 +115,10 @@
 .btn:hover {
 
     text-decoration:underline;
+}
+
+#editable.body-com {
+    outline: 0px solid transparent;
+    
+
 }

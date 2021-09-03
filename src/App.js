@@ -1,7 +1,8 @@
 import './App.css';
 import {useEffect, useState} from 'react'
 import axios from 'axios'
-import Users from './components/Post/Post'
+import Post from './components/Post/Post'
+import './spinner.css'
 
 function App() {
   const [posts, setPosts] = useState({
@@ -42,8 +43,8 @@ function App() {
     <div className="App">
       <nav className="nav"><span><strong className="str">COMPANY </strong>SOCIAL NETWORK</span></nav>
       {posts.dataReady && comments.dataReady  ? posts.posts.map((data, i) =>
-      (<Users key={i} clave={i} post={data} com= {comments} />)) 
-      :(<h1>Loading ...</h1>)}
+      (<Post key={i} clave={i} post={data} com= {comments} />)) 
+      :<div class="lds-ring"><div></div><div></div><div></div><div></div></div>}
     </div>
   );
 }
