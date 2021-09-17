@@ -6,6 +6,7 @@
     border-radius: 10px; 
     margin-bottom: 15px;
     margin-left: 30%;
+    
     display: flex; 
     flex-direction: column; 
     box-shadow: 0px 10px 10px rgb(194, 194, 194) ;
@@ -33,7 +34,7 @@
     margin-top: 35px;
     margin-left: 20px; 
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-left: 80px;
     padding-right: 10px; 
     padding-bottom: 20px;
@@ -52,6 +53,7 @@
     border-bottom: 1px solid;
     background-color: #3E606F;
     overflow: hidden;
+  
 }
 
 .card .comments {
@@ -113,4 +115,14 @@
 #editable.body-com {
     outline: 0px solid transparent;
     
+}
+
+@media only screen and (max-width:768px) {
+
+    .card {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+
 }
