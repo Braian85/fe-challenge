@@ -14,11 +14,9 @@ function Post({post, com, clave}) {
   
   useEffect(() => {
     if(activatedComments)  {
-      console.log("Entró a useEffect")
       axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${post.id}`)
       .then( res => {
-        console.log(res.data);
-
+        
         res.data.forEach((fe) => 
         dispatch(addComment({
           postId: post.id,
@@ -43,14 +41,12 @@ function Post({post, com, clave}) {
   function togglePanel(e) {
     e.preventDefault()
     setActivatedComments(!activatedComments)
-    console.log("toggle open:", activatedComments);  
+   
   }
   
   function handleEnter(e) {
     if (e.key === 'Enter') {
       e.preventDefault(); 
-      console.log("Comment", e.target.value)
-      console.log("post ID on Enter: ", post.id); 
       dispatch(addComment({
         postId: post.id,
         comment: {
