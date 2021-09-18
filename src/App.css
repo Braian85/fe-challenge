@@ -1,6 +1,7 @@
 .App {
 
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  font-family: open sans;
   background-color: rgb(187, 187, 187);
 }
 
@@ -13,42 +14,31 @@ html {
   font-size: large;
   position: sticky; 
   top: 0; 
-  color: white; 
+  color: #3b81cd; 
   text-align: center; 
- display: block; 
+  display: block; 
   justify-content: center;
   align-items: center;
-  background-color: #173e72;
+  background-color: #fff;
   margin-top: 0%;
   padding-top: 20px;  
   padding-bottom: 20px;
   margin-bottom: 40px;
-
- 
   
-  
-
 }
 
+.nav span {
+  font-size: 4rem; 
+
+}
 .nav span .str{
 
-  font-size: 35px;
+  font-size: 4rem;
+  color: #002951;
+  font-family: 'Gothic A1', sans-serif;
 }
 
 .nav span:hover {
 animation: glow .5s forwards ;
  
 }
-
-@keyframes glow {
-   from{
-    text-shadow: 0 0 0px #fff;
-    color: #ffffff;
-    }
-  to{
-    text-shadow: 0 0 10px #fff, 0 0 20px #F5E6FF, 0 0 30px #ff0000;
-    color:#ffffff;
-  
-    }
-}
-

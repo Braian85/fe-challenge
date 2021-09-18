@@ -32,7 +32,7 @@ function App() {
   console.log(posts)
   return (
     <div className="App">
-      <nav className="nav"><span><strong className="str">COMPANY </strong>SOCIAL NETWORK</span></nav>
+      <nav className="nav"><span><strong className="str">Auto</strong>Feed</span></nav>
       {!postsLoading ? posts.map((data, i) =>
       (<Post key={i} clave={i} post={data}  />)) 
       :<div class="lds-ring"><div></div><div></div><div></div><div></div></div>}
