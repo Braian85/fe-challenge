@@ -1,10 +1,34 @@
-# Project Assumtions
+# Project: Front-End Challenge
 
--The project consists in building a Feed of a company social network.\
--Posts and comments endpoint entries are 100. \
+Task: Build a ReactJS project that fetches from the posts and comments APIs, presents a list of\
+posts and when any of the items is clicked show the list of comments that are associated with\
+that specific post.\
+
+# Libraries and Dependencies used: 
+
+Apart from the necessary libraries needed, the following dependencies have been added:\ 
+
+-axios. (Communication with JSON placeholder API).\
+-reduxjs/toolkit. (lightweight API of Redux for quick implementation).\
+
+# CodeSandbox Link:
+
+
+
+
+# Assumptions:
+
 -Users pictures are provided by the following endpoint: \
            https://i.pravatar.cc/150?img=1 \
--Infinite scroll for posts and comments would be implemented with more time.
+
+-Posts and comments endpoint entries are 100. \
+-Branding color pallete is provided.\
+
+
+# Next Suggested Steps: 
+
+-Test components using React Testing Library and JEST.\
+-
 
 # Getting Started with Create React App
 

@@ -7,7 +7,7 @@ import axios from 'axios'
 
 import {useState} from 'react'
 
-function Post({post, com, clave}) {
+function Post({post}) {
   const dispatch = useDispatch();
   const [activatedComments, setActivatedComments] = useState(false)
   console.log("activatedComments", activatedComments);
