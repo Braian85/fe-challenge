@@ -5,11 +5,9 @@ function Post({ post, setActivatedComments, activatedComments, addComment }) {
   function togglePanel(e) {
     e.preventDefault();
     setActivatedComments(!activatedComments);
-   
   }
- 
+
   function handleEnter(e) {
-    
     if (e.key === "Enter") {
       e.preventDefault();
       addComment({

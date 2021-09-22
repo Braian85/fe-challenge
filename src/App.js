@@ -17,7 +17,6 @@ function App() {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((res) => {
-        console.log("res.data: ",res.data)
         dispatch(addPosts(res.data));
       })
       .catch((err) => {

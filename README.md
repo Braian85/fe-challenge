@@ -23,10 +23,10 @@ Apart from the necessary libraries needed, the following dependencies have been 
 -Posts and comments endpoint entries are 100 records. \
 -Branding color pallete is provided.\
 
-# Next Suggested Steps: 
+# Suggested new features: 
 
--Test components using React Testing Library and JEST.\
--
+-Pagination /Infinite Scrolling.\
+-spinner for comment button. \
 
 # Getting Started with Create React App
 
