@@ -10,10 +10,9 @@ Apart from the necessary libraries needed, the following dependencies have been 
 
 -axios. (Communication with JSON placeholder API).\
 -reduxjs/toolkit. (lightweight API of Redux for quick implementation).\
+-@testing-library and Jest dom (Unit Testing)\
 
 # CodeSandbox Link:
-
-
 
 
 # Assumptions:
@@ -21,9 +20,8 @@ Apart from the necessary libraries needed, the following dependencies have been 
 -Users pictures are provided by the following endpoint: \
            https://i.pravatar.cc/150?img=1 \
 
--Posts and comments endpoint entries are 100. \
+-Posts and comments endpoint entries are 100 records. \
 -Branding color pallete is provided.\
-
 
 # Next Suggested Steps: 
 
