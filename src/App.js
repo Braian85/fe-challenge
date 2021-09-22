@@ -1,7 +1,7 @@
 import "./App.css";
 import { useEffect } from "react";
 import axios from "axios";
-import Post from "./components/Post/Post";
+import PostContainer from "./components/Post/PostContainer";
 import "./spinner.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addPosts, setPostsLoading } from "./redux/slices/chatSlices";
@@ -17,6 +17,7 @@ function App() {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((res) => {
+        console.log("res.data: ",res.data)
         dispatch(addPosts(res.data));
       })
       .catch((err) => {
@@ -35,7 +36,7 @@ function App() {
         </span>
       </nav>
       {!postsLoading ? (
-        posts.map((data, i) => <Post key={i} clave={i} post={data} />)
+        posts.map((data, i) => <PostContainer key={i} post={data} />)
       ) : (
         <div class="lds-ring">
           <div></div>
