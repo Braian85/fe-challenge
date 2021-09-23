@@ -40,16 +40,21 @@ function PostContainer({ post }) {
   }, [activatedComments, dispatch, post.id]);
 
   function internalAddComment(e) {
-    dispatch(
-      addComment({
-        postId: post.id,
-        comment: {
-          name: "Braian",
-          email: "braian@gmail.com",
-          body: e.target.value,
-        },
-      })
-    );
+    if (e.key === "Enter") {
+      if (e.target.value) {
+        dispatch(
+          addComment({
+            postId: post.id,
+            comment: {
+              name: "Braian",
+              email: "braian@gmail.com",
+              body: e.target.value,
+            },
+          })
+        );
+        e.target.value = "";
+      }
+    }
   }
 
   return (

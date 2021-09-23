@@ -1,25 +1,14 @@
-import React from "react";
 import "./Post.css";
 
-function Post({ post, setActivatedComments, activatedComments, addComment }) {
+function Post({
+  post,
+  setActivatedComments,
+  activatedComments,
+  internalAddComment,
+}) {
   function togglePanel(e) {
     e.preventDefault();
     setActivatedComments(!activatedComments);
-  }
-
-  function handleEnter(e) {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      addComment({
-        postId: post.id,
-        comment: {
-          name: "Braian",
-          email: "braian@gmail.com",
-          body: e.target.value,
-        },
-      });
-      e.target.value = "";
-    }
   }
 
   return (
@@ -62,7 +51,7 @@ function Post({ post, setActivatedComments, activatedComments, addComment }) {
             id="editable"
             placeholder="Add Comments Here..."
             className="body-com"
-            onKeyPress={handleEnter}
+            onKeyPress={internalAddComment}
           />
         </div>
       ) : null}
