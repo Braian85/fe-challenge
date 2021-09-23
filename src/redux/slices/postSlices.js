@@ -41,6 +41,5 @@ export const postSlices = createReducer(initialPost, (builder) => {
   });
   builder.addCase(setPostsLoading, (state, action) => {
     state.postsLoading = action.payload;
-    console.log("Acá es state: ", state.postsLoading);
   });
 });

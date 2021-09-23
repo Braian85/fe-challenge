@@ -28,36 +28,37 @@ function Post({
           Comments
         </button>
       </div>
-      {activatedComments
-        ? post.comments.map((e) => (
-            <>
-              <div className="comments">
-                <div className="contact-info">
-                  <div className="name"> {e.name}</div>
-                  <div className="email"> {e.email}</div>
-                </div>
-                <div className="body-com">
-                  <span> {e.body}</span>
-                </div>
-              </div>
 
-              <div className="comments">
-                <div className="contact-info">
-                  <div className="name"> name</div>
-                  <div className="email"> email</div>
-                </div>
-
-                <input
-                  id="editable"
-                  placeholder="Add Comments Here..."
-                  className="body-new-com"
-                  onKeyPress={internalAddComment}
-                  commentId={post.id}
-                />
+      {activatedComments ? (
+        <>
+          {post.comments.map((e) => (
+            <div className="comments">
+              <div className="contact-info">
+                <div className="name"> {e.name}</div>
+                <div className="email"> {e.email}</div>
               </div>
-            </>
-          ))
-        : null}
+              <div className="body-com">
+                <span> {e.body}</span>
+              </div>
+            </div>
+          ))}
+
+          <div className="comments">
+            <div className="contact-info">
+              <div className="name"> name</div>
+              <div className="email"> email</div>
+            </div>
+
+            <input
+              id="editable"
+              placeholder="Add Comments Here..."
+              className="body-new-com"
+              onKeyPress={internalAddComment}
+              commentId={post.id}
+            />
+          </div>
+        </>
+      ) : null}
     </div>
   );
 }
