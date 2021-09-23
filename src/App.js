@@ -1,8 +1,8 @@
-import "./App.css";
+import "../src/styles/spinner.css";
+import "./styles/App.css";
 import { useEffect } from "react";
 import axios from "axios";
 import PostContainer from "./components/Post/PostContainer";
-import "./spinner.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addPosts, setPostsLoading } from "./redux/slices/chatSlices";
 
@@ -34,15 +34,11 @@ function App() {
           <strong className="str">Auto</strong>Feed
         </span>
       </nav>
+     
       {!postsLoading ? (
         posts.map((data, i) => <PostContainer key={i} post={data} />)
       ) : (
-        <div class="lds-ring">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <div class="lds-dual-ring"></div>
       )}
     </div>
   );

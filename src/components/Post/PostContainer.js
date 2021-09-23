@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Post.css";
+import "../../styles/Post.css";
 import { useDispatch } from "react-redux";
 import { addComment, addComments } from "../../../src/redux/slices/chatSlices";
 import axios from "axios";

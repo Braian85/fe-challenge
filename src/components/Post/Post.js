@@ -1,4 +1,5 @@
-import "./Post.css";
+// import "./Post.css";
+import "./../../../src/styles/Post.css";
 
 function Post({
   post,
@@ -52,7 +53,7 @@ function Post({
             placeholder="Add Comments Here..."
             className="body-new-com"
             onKeyPress={internalAddComment}
-            commentId = {post.id}
+            commentId={post.id}
           />
         </div>
       ) : null}
