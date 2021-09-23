@@ -3,9 +3,10 @@
   width: 80px;
   height: 80px;
   margin-left:48%; 
-
+ 
 }
 .App .lds-dual-ring:after {
+  
   content: " ";
   margin-left:30%; 
   display: block;

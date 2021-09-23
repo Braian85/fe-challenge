@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { chatSlices } from "../slices/chatSlices";
+import { postSlices } from "../slices/postSlices";
 
 const store = configureStore({
   reducer: {
-    chat: chatSlices,
+    post: postSlices,
   },
 });
 

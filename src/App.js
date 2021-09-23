@@ -4,12 +4,14 @@ import { useEffect } from "react";
 import axios from "axios";
 import PostContainer from "./components/Post/PostContainer";
 import { useDispatch, useSelector } from "react-redux";
-import { addPosts, setPostsLoading } from "./redux/slices/chatSlices";
+import { addPosts, setPostsLoading } from "./redux/slices/postSlices";
 
 function App() {
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state?.chat.posts);
-  const postsLoading = useSelector((state) => state?.postsLoading);
+  const posts = useSelector((state) => state?.post.posts);
+  var postsLoading = useSelector((state) => state?.postsLoading);
+  console.log("App postsLoading: ", postsLoading  )
+  // const postsLoading = true; 
 
   // Hook to load Users.
   useEffect(() => {
@@ -24,6 +26,7 @@ function App() {
       })
       .finally(() => {
         dispatch(setPostsLoading(false));
+     
       });
   }, [dispatch]);
 
@@ -38,7 +41,9 @@ function App() {
       {!postsLoading ? (
         posts.map((data, i) => <PostContainer key={i} post={data} />)
       ) : (
+        
         <div class="lds-dual-ring"></div>
+        
       )}
     </div>
   );
