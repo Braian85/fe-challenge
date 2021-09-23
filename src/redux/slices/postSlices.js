@@ -4,12 +4,12 @@ export const addComment = createAction("addComment/post");
 export const addComments = createAction("addComments/post");
 export const setPostsLoading = createAction("setPostsLoading/post");
 
-const initialChat = {
+const initialPost = {
   posts: [],
   postsLoading: true,
 };
 
-export const postSlices = createReducer(initialChat, (builder) => {
+export const postSlices = createReducer(initialPost, (builder) => {
   builder.addCase(addPosts, (state, action) => {
     state.posts = action.payload.map((p) => ({ ...p, comments: [] }));
   });
@@ -41,6 +41,6 @@ export const postSlices = createReducer(initialChat, (builder) => {
   });
   builder.addCase(setPostsLoading, (state, action) => {
     state.postsLoading = action.payload;
-    console.log("Acá es state: ", state.postsLoading)
+    console.log("Acá es state: ", state.postsLoading);
   });
 });

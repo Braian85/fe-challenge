@@ -9,9 +9,7 @@ import { addPosts, setPostsLoading } from "./redux/slices/postSlices";
 function App() {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state?.post.posts);
-  var postsLoading = useSelector((state) => state?.postsLoading);
-  console.log("App postsLoading: ", postsLoading  )
-  // const postsLoading = true; 
+  var postsLoading = useSelector((state) => state?.post.postsLoading);
 
   // Hook to load Users.
   useEffect(() => {
@@ -26,7 +24,6 @@ function App() {
       })
       .finally(() => {
         dispatch(setPostsLoading(false));
-     
       });
   }, [dispatch]);
 
@@ -37,13 +34,11 @@ function App() {
           <strong className="str">Auto</strong>Feed
         </span>
       </nav>
-     
+
       {!postsLoading ? (
         posts.map((data, i) => <PostContainer key={i} post={data} />)
       ) : (
-        
         <div class="lds-dual-ring"></div>
-        
       )}
     </div>
   );
