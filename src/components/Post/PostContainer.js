@@ -1,17 +1,16 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Post.css";
 import { useDispatch } from "react-redux";
 import { addComment } from "../../../src/redux/slices/chatSlices";
 import axios from "axios";
 import Post from "./Post";
 
-import { useState } from "react";
-
 function PostContainer({ post }) {
   const dispatch = useDispatch();
   const [activatedComments, setActivatedComments] = useState(false);
-
+  const [newComments, setNewComments] = useState([]);
+  const [postId, setPostId] = useState(0); 
+  
   useEffect(() => {
     if (activatedComments) {
       axios
@@ -30,6 +29,24 @@ function PostContainer({ post }) {
             )
           );
         })
+        //Here the localStorage comments are added to Store. 
+/*         .then( 
+             console.log("localStorage: ",JSON.parse(localStorage.getItem(postId.toString())))
+             ,
+            JSON.parse(localStorage.getItem(postId.toString())).map(v => 
+
+              dispatch(
+                addComment({
+                  postId: postId.toString(),
+                  comment: {
+                    name: "Braian",
+                    email: "braian@gmail.com",
+                    body: v},
+                  }
+                )
+              )
+            ) 
+        ) */
         .catch((err) => {
           console.log(err);
         })
@@ -39,7 +56,12 @@ function PostContainer({ post }) {
     }
   }, [activatedComments, dispatch, post.id]);
 
-  function internalAddComment(e) {
+/*   useEffect(() => {
+    console.log("newComments: ", newComments);
+    localStorage.setItem(postId, JSON.stringify(newComments));
+  },[newComments, postId]); */
+
+  function internalAddComment(e, id) {
     if (e.key === "Enter") {
       if (e.target.value) {
         dispatch(
@@ -52,8 +74,12 @@ function PostContainer({ post }) {
             },
           })
         );
+        setPostId(e.target.getAttribute('commentId'));
+        setNewComments([...newComments, e.target.value ]);
+        console.log('id: ', e.target.getAttribute('commentId'));
         e.target.value = "";
       }
+      
     }
   }
 

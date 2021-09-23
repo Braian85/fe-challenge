@@ -50,8 +50,9 @@ function Post({
           <input
             id="editable"
             placeholder="Add Comments Here..."
-            className="body-com"
+            className="body-new-com"
             onKeyPress={internalAddComment}
+            commentId = {post.id}
           />
         </div>
       ) : null}

@@ -22,6 +22,11 @@ export const chatSlices = createReducer(initialChat, (builder) => {
       action.payload.comment,
     ];
     state.posts = posts;
+    //  localStorage.setItem(postIdx,JSON.stringify([...posts[postIdx].comments, action.payload.comment]));
+    localStorage.setItem(postIdx,JSON.stringify(state));
+
+    
+
   });
   builder.addCase(setPostsLoading, (state, action) => {
     state.postsLoading = action.payload;
